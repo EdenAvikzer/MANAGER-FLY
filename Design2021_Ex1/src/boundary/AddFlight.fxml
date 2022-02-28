@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="boundary.AddFlight">
+   <children>
+      <Text fill="#35a5d5" layoutX="290.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Management" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <HBox layoutX="39.0" layoutY="62.0" prefHeight="260.0" prefWidth="836.0">
+         <children>
+            <VBox prefHeight="217.0" prefWidth="522.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="323.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Enter Flight Number:" wrappingWidth="162.89482879638672">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="flightNumberField" prefHeight="25.0" prefWidth="346.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="323.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. Choose Departure Date: " wrappingWidth="179.01670837402344">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="depDate" prefHeight="25.0" prefWidth="103.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <ChoiceBox fx:id="depHour" prefHeight="26.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="7.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="14.7359619140625">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ChoiceBox fx:id="depMinutes" prefHeight="26.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="323.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. Choose Landing Date: " wrappingWidth="167.21875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="24.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <DatePicker fx:id="landDate" prefHeight="25.0" prefWidth="101.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <ChoiceBox fx:id="landHour" prefHeight="26.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="7.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="14.7359619140625">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ChoiceBox fx:id="landMinutes" prefHeight="26.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Button accessibleRoleDescription="t" alignment="CENTER" mnemonicParsing="false" onAction="#checkDate" prefHeight="22.0" prefWidth="126.0" text="Check Date">
+                     <VBox.margin>
+                        <Insets left="270.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fx:id="checker" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@cheker.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Button>
+                  <Label fx:id="errorLabel" alignment="CENTER" prefHeight="16.0" prefWidth="359.0" textAlignment="CENTER" textFill="RED" visible="false">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="260.0" prefWidth="335.0">
+               <children>
+                  <HBox prefHeight="41.0" prefWidth="253.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. Origin:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="44.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ChoiceBox fx:id="origin" disable="true" prefHeight="25.0" prefWidth="109.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#moveToAddAirport" prefHeight="26.0" prefWidth="102.0" text="add Airport" wrapText="true">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="2.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="253.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5. Destination:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ChoiceBox fx:id="destination" disable="true" prefHeight="25.0" prefWidth="194.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="70.0" prefWidth="254.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6. Plane:" wrappingWidth="72.95526123046875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="33.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ChoiceBox fx:id="choosePlaneChoise" disable="true" prefHeight="25.0" prefWidth="121.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#moveToAddPlane" prefHeight="26.0" prefWidth="102.0" text="add Plane">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="2.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="26.0" prefWidth="92.0" />
+                  <Button fx:id="addFlightButton" mnemonicParsing="false" onAction="#addNewFlight" prefHeight="26.0" prefWidth="72.0" text="Add" textFill="#35a5d5">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="155.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="secondScreen" layoutX="68.0" layoutY="362.0" prefHeight="278.0" prefWidth="779.0" style="-fx-background-color: grey;">
+         <children>
+            <TableView fx:id="allFlightsTable" layoutX="6.0" layoutY="6.0" prefHeight="254.0" prefWidth="769.0">
+               <columns>
+                  <TableColumn fx:id="flightIDCol" prefWidth="73.59998321533203" text="Flight ID" />
+                  <TableColumn fx:id="departureCol" prefWidth="128.5714340209961" text="Departure" />
+                  <TableColumn fx:id="landingCol" prefWidth="116.00007629394531" text="Landing" />
+                  <TableColumn fx:id="fromCol" prefWidth="143.42861938476562" text="From" />
+                  <TableColumn fx:id="toCol" prefWidth="149.14288330078125" text="To" />
+                  <TableColumn fx:id="statusCol" prefWidth="84.00006103515625" text="Status" />
+                  <TableColumn fx:id="airplaneIDCol" prefWidth="75.0" text="Airplane ID" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+      <Button fx:id="returnButton" layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="boundary.AddAirport">
+   <children>
+      <VBox layoutX="67.0" layoutY="74.0" prefHeight="273.0" prefWidth="751.0">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Enter airport code :" wrappingWidth="253.84803771972656">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="airportCodeField">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. Enter city :" wrappingWidth="252.1791534423828">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="cityField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. Enter country :" wrappingWidth="251.1791534423828">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="countryField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. Enter GMT :" wrappingWidth="250.1791534423828">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="GMTCombo" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="86.0" prefWidth="751.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addAirport" prefHeight="26.0" prefWidth="72.0" text="Add" textFill="#35a5d5">
+                     <HBox.margin>
+                        <Insets left="620.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text fill="#35a5d5" layoutX="331.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airport Managment" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="103.0" layoutY="313.0" prefHeight="330.0" prefWidth="715.0">
+         <children>
+            <TableView fx:id="allAiprortView" layoutX="14.0" layoutY="8.0" prefHeight="313.0" prefWidth="687.0">
+               <columns>
+                  <TableColumn fx:id="airportCodeCol" prefWidth="139.0" text="Airport Code" />
+                  <TableColumn fx:id="cityCol" prefWidth="196.0" text="City" />
+                  <TableColumn fx:id="countryCol" prefWidth="180.0" text="Country" />
+                  <TableColumn fx:id="GMTCol" prefWidth="171.0" text="GMT" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="returnButton" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return" />
+   </children>
+</AnchorPane>

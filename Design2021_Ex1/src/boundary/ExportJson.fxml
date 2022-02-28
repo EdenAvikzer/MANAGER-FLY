@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="mainScreen" prefHeight="700.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="boundary.ExportJson">
+   <children>
+      <Button fx:id="exportBtn" layoutX="300.0" layoutY="128.0" mnemonicParsing="false" onAction="#exportToJson" prefHeight="84.0" prefWidth="238.0" text="Export" />
+      <Text fill="#35a5d5" layoutX="300.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Export Updated Flights" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="returnButton" layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return" />
+   </children>
+</AnchorPane>

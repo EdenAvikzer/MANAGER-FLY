@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flights_info>
+	<flight>
+		<flightNum>1897</flightNum>
+		<status>delayed</status>
+	</flight>
+	<flight>
+		<flightNum>1115</flightNum>
+		<status>delayed</status>
+	</flight>
+	<flight>
+		<flightNum>1474</flightNum>
+		<status>cancalled</status>
+	</flight>
+	<flight>
+		<flightNum>1564</flightNum>
+		<status>onTime</status>
+	</flight>
+	<flight>
+		<flightNum>18</flightNum>
+		<status>onTime</status>
+	</flight>
+</Flights_info>

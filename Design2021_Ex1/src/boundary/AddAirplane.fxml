@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="693.0" prefWidth="917.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="boundary.AddAirplane">
+   <children>
+      <Text fill="#35a5d5" layoutX="280.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airplane Managment" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <VBox layoutX="67.0" layoutY="74.0" prefHeight="194.0" prefWidth="751.0">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Enter tail number :" wrappingWidth="275.84803771972656">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tailNumberField">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. Enter number of flight attendants :" wrappingWidth="275.1791534423828">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="flightAttendNumberField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="34.0" prefWidth="751.0">
+               <children>
+                  <HBox prefHeight="41.0" prefWidth="751.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. Choose number of seats in a row:" wrappingWidth="275.1791534423828">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="seatsInRowField" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="70.0" prefWidth="751.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. Choose how many rows in each class:" wrappingWidth="275.1791534423828">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="firstClassField" prefHeight="25.0" prefWidth="110.0" promptText="first class">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></TextField>
+                  <TextField fx:id="buisnessClassField" prefHeight="25.0" prefWidth="110.0" promptText="buisness class">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></TextField>
+                  <TextField fx:id="touristCladdField" prefHeight="25.0" prefWidth="110.0" promptText="tourist class">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="40.0" layoutY="306.0" prefHeight="334.0" prefWidth="400.0">
+         <children>
+            <TableView fx:id="allAiprlaneView" layoutX="-19.0" layoutY="7.0" prefHeight="320.0" prefWidth="412.0">
+              <columns>
+                <TableColumn fx:id="tailNumCol" prefWidth="103.99999618530273" text="Tail Number" />
+                <TableColumn fx:id="NumOfFlightAttenCol" prefWidth="287.1999969482422" text="Number of flight attendants in the plane" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="returnButton" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return" />
+      <Button layoutX="782.0" layoutY="186.0" mnemonicParsing="false" onAction="#addAirplane" prefHeight="26.0" prefWidth="72.0" text="Add" textFill="#35a5d5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="453.0" layoutY="306.0" prefHeight="334.0" prefWidth="400.0">
+         <children>
+            <TableView fx:id="seatsByAirplane" layoutX="3.0" layoutY="7.0" prefHeight="320.0" prefWidth="412.0">
+               <columns>
+                  <TableColumn fx:id="seatIDCol" prefWidth="39.0" text="ID" />
+                  <TableColumn fx:id="rowCol" prefWidth="88.00006103515625" text="Row" />
+                  <TableColumn fx:id="seatCol" prefWidth="92.79998779296875" text="Seat" />
+                  <TableColumn fx:id="classCol" prefWidth="145.60003662109375" text="Class" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Text fill="#2e6c84" layoutX="22.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airplane details:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="seatDetailsText" fill="#2e6c84" layoutX="459.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seats details:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#2e6c84" layoutX="22.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose plane to see its seats)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

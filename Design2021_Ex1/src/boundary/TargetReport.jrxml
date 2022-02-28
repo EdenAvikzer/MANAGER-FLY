@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TargetReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba664312-85ec-4541-a879-c6051015d2de">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="src\control\BigFlightRepo.xml"/>
+	<parameter name="1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT Airport.country, (Count(Flight.flightID)* 100/quer_cnt_flights_in_last_month.CountOfFlights) AS Expr1
+FROM quer_cnt_flights_in_last_month, Airport INNER JOIN (Flight INNER JOIN Airport AS Airport_1 ON Flight.destinationAirportID = Airport_1.airportID) ON Airport.airportID = Flight.originAirportID
+WHERE (((Month(Flight.departureTime))=Month(Date())) AND ((Airport_1.country)=$P{1}))
+GROUP BY Airport.country, quer_cnt_flights_in_last_month.CountOfFlights;]]>
+	</queryString>
+	<field name="country" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="country"/>
+		<property name="com.jaspersoft.studio.field.label" value="country"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Airport"/>
+	</field>
+	<field name="Expr1" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="EXPR1"/>
+		<property name="com.jaspersoft.studio.field.label" value="Expr1"/>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="0" width="560" height="79" forecolor="#1900FF" uuid="45bcbefd-8c0b-4541-a723-22f7c32ef199"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($P{1}, "'s Flight By Origin")]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="440" y="0" width="101" height="30" uuid="fb2c9207-7707-4591-b5dd-112be7d14337"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="402">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="30" width="539" height="372" uuid="725cd454-96e3-43c6-8596-2057ec2ce6eb"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Report"/>
+					<categorySeries>
+						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{country}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Expr1}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

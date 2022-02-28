@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.AddShift">
+   <children>
+      <VBox layoutX="63.0" layoutY="89.0" prefHeight="224.0" prefWidth="786.0">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="323.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Enter Shift Start Time:" wrappingWidth="200.01670837402344">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="startDate" prefHeight="25.0" prefWidth="103.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ChoiceBox fx:id="startHour" prefHeight="26.0" prefWidth="55.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="14.7359619140625">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ChoiceBox fx:id="startMinute" prefHeight="26.0" prefWidth="55.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="323.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. Enter Shift End Time:" wrappingWidth="187.21875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="24.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <DatePicker fx:id="endDate" prefHeight="25.0" prefWidth="101.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ChoiceBox fx:id="endHour" prefHeight="26.0" prefWidth="55.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="14.7359619140625">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ChoiceBox fx:id="endMinute" prefHeight="26.0" prefWidth="55.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="323.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. Choose Ground Attendant:" wrappingWidth="200.21875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="24.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ChoiceBox fx:id="gaCombo" prefHeight="25.0" prefWidth="124.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="323.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. Choose Shift Role:" wrappingWidth="200.21875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="24.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ChoiceBox fx:id="roleCombo" prefHeight="25.0" prefWidth="124.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Text fill="#35a5d5" layoutX="300.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift Management" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="734.0" layoutY="313.0" mnemonicParsing="false" onAction="#addShift" prefHeight="26.0" prefWidth="72.0" text="Add" textFill="#35a5d5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="93.0" layoutY="350.0" prefHeight="330.0" prefWidth="715.0">
+         <children>
+            <TableView fx:id="allGAInShiftView" layoutX="74.0" layoutY="9.0" prefHeight="313.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="startCol" prefWidth="150.0" text="Start Time" />
+                  <TableColumn fx:id="endCol" prefWidth="162.0" text="End Time" />
+                  <TableColumn fx:id="gaCol" prefWidth="164.0" text="Ground Attendant" />
+                  <TableColumn fx:id="roleCol" prefWidth="123.0" text="Role" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="returnButton" layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return" />
+   </children>
+</AnchorPane>

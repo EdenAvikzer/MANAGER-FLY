@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.MenuScreen">
+   <children>
+      <Text fill="#35a5d5" layoutX="366.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGER-FLY" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <VBox layoutX="229.0" layoutY="100.0" prefHeight="582.0" prefWidth="442.0" spacing="20.0">
+         <children>
+            <Button fx:id="flightManagmentBtn" mnemonicParsing="false" onAction="#flightManagment" prefHeight="30.0" prefWidth="420.0" text="Flight Managment">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@plane-departure-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reportsBtn" mnemonicParsing="false" onAction="#genrateBigFlightRepo" prefHeight="30.0" prefWidth="420.0" text="Genrate Reports">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@chart-line-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="airplaneManagmentBtn" mnemonicParsing="false" onAction="#airplaneManagment" prefHeight="30.0" prefWidth="421.0" text="Aiprlane Managment">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@plane-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="airportManagmentBtn" mnemonicParsing="false" onAction="#airportManagment" prefHeight="30.0" prefWidth="443.0" text="Airport Managment">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@passport-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="employeeManagmentBtn" mnemonicParsing="false" onAction="#employeeManagment" prefHeight="30.0" prefWidth="443.0" text="Employees Managment">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@address-card-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="assignEmployeesBtn" mnemonicParsing="false" onAction="#assignEmployees" prefHeight="30.0" prefWidth="443.0" text="Assign Employees">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user-plus-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="shiftManagmentBtn" mnemonicParsing="false" onAction="#shiftManagment" prefHeight="30.0" prefWidth="443.0" text="Shift Managment">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@users-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="importStatusBtn" mnemonicParsing="false" onAction="#importStatus" prefHeight="30.0" prefWidth="443.0" text="Import Flight Status">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@file-import-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="exportFlightsBtn" mnemonicParsing="false" onAction="#exportFlights" prefHeight="30.0" prefWidth="443.0" text="Export Updated Flights">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@file-export-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Button layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="88.0" text="Log Out" />
+   </children>
+</AnchorPane>
